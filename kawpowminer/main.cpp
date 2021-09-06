@@ -215,7 +215,7 @@ public:
     {
         std::queue<string> warnings;
 
-        CLI::App app("kawpowminer - GPU ProgPOW(0.9.3) miner for Zing");
+        CLI::App app("kawpowminer - GPU ProgPOW(0.9.3-DeadjimMod) miner for Zing with DeadjimMod");
 
         bool bhelp = false;
         string shelpExt;
@@ -328,7 +328,7 @@ public:
             ->check(CLI::Range(1, 131072));
 
         app.add_set("--cuda-block-size,--cu-block-size", m_CUSettings.blockSize,
-            {32, 64, 128, 256, 512}, "", true);
+            {32, 64, 128, 256, 512, 1024}, "", true);
 
         app.add_set(
             "--cuda-parallel-hash,--cu-parallel-hash", m_CUSettings.parallelHash, {1, 2, 4, 8}, "", true);
@@ -899,7 +899,7 @@ public:
                  << endl
                  << "    --cu-grid-size      INT [1 .. 131072] Default = " << m_CUSettings.gridSize << endl
                  << "                        Set the grid size" << endl
-                 << "    --cu-block-size     UINT {32,64,128,256} Default = " << m_CUSettings.blockSize << endl
+                 << "    --cu-block-size     UINT {32,64,128,256,512,1024} Default = " << m_CUSettings.blockSize << endl
                  << "                        Set the block size" << endl
                  << "    --cu-devices        UINT {} Default not set" << endl
                  << "                        Space separated list of device indexes to use" << endl
