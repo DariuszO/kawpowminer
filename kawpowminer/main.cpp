@@ -899,7 +899,7 @@ public:
                  << endl
                  << "    --cu-grid-size      INT [1 .. 131072] Default = " << m_CUSettings.gridSize << endl
                  << "                        Set the grid size" << endl
-                 << "    --cu-block-size     UINT {32,64,128,256} Default = " << m_CUSettings.blockSize << endl
+                 << "    --cu-block-size     UINT {32,64,128,256,512} Default = " << m_CUSettings.blockSize << endl
                  << "                        Set the block size" << endl
                  << "    --cu-devices        UINT {} Default not set" << endl
                  << "                        Space separated list of device indexes to use" << endl
